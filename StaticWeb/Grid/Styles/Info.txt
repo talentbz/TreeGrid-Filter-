@@ -1,0 +1,7 @@
+Responsive TreeGrid CSS styles
+For IE10 and newer browsers
+...Dialog.css is base style for all components and standalone dialogs, includes also fonts
+...Grid.css is base style for grid and sheet
+...Gantt.css is style for Gantt chart (the chart column only)
+
+To modify these styles modify their sources in /GridSrc/ directory and compile them by /GridCSS/ShrinkCSS.exe compiler

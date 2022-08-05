@@ -1,0 +1,6 @@
+TreeGrid translations to different languages
+
+.xml files are used when TreeGrid is in XML mode (<bdo/treegrid Json='0'>)
+.js files are used when TreeGrid is in JSON mode (<bdo/treegrid Json='1' or '2'>)
+
+For more information about Json attribute and its default value see http://www.treegrid.com/Doc/DataCommunication.htm#Json

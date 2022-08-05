@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<Grid>
+   <Cfg id='Production document' Size='Tiny' SuppressCfg='1' MainCol='document_type' ShowDeleted='1'/>
+   <Cfg Validate='All,Added,Focus,Edit,Changed,Text' ValidateMessageTime='2500' ValidateMessage="Ju lutemi plotësoni të dhënat e nevojshme tek qelizat me ngjyrë të kuqe!"/>
+   <Cfg SearchCells='1' SearchAction='Select' SearchHidden='1'/>
+   <Cfg RowIndex='Nr.' RowIndexWidth='80' />
+   <Cfg Paging="3" ColPaging="2" PageLengthDiv="2" FastPages="500" PageLength="100"  AllPages='1' RemoveUnusedPages='3' />
+   <Cfg ChildPaging="3" ChildPageLength="25" ChildPageDiff="-25"/>
+   <Cfg ChildParts="2" ChildPartMin="0"/>
+   <Cfg MaxHeight='1'/>
+   <Cfg CopyPasteTree ='3'/>
+   <Cfg Alternate='2'/>   
+   <Cfg AutoCalendar='1'/> 
+   <Cfg SelectingCells='1' />
+   <Cfg ConstHeight='1'/>
+   <Cfg SearchNotFound='1' />
+   <Cfg ExportType='Expanded,Outline'/>
+   <Cfg CalculateSelected='1'/> 
+   <Cfg PrintVarHeight='2'/>
+   <Cfg Undo='1'/>
+   <Cfg SuppressMessage='1'/>
+   <Cfg NumberId='1' IdChars='0123456789'/> 
+   <Cfg PrintPagePrefix="&lt;center class='%9' style='width:%7px'>First example printed page %3 from %6&lt;/center>"/>
+   <Cfg PrintPagePostfix="&lt;center class='%9' style='width:%7px'>Page %1 horizontally from %4 , page %2 vertically from %5&lt;/center>"/>
+   <Cfg Language='EN'/>
+   <Colors Alternate="rgb(251,251,251,1)"/>
+   <Actions OnDel="ClearValue"/>
+   <Actions OnMouseOverEditable="Grid.MouseCursor('url(aero_prec.cur),default')"/>
+   <Pager Width="100" Visible='0'/>
+
+   <Def>   
+      <D 
+         Name='Node' 
+         Parent='#Body' CDef='Data' Sorted='1' AcceptDef='Data' Spanned='1' Calculated='1' Expanded='1' CanFilter='1' 
+         item_uuid='Transfer Items' item_uuidSpan="10" item_uuidCanEdit="0" item_uuidCanFocus='0' item_uuidAlign="Center" 
+      />
+
+      <D 
+         Name='Data' 
+         CDef='' AcceptDef='Data' 
+         Calculated='1' Spanned='1' Expanded='1' FormulaSuggest="6" A0="A0 centered &amp; scrolled"
+         document_type='-' document_typeSpan='3' document_typeAlign="Scroll"
+         posting_date='' posting_dateSpan="2" posting_dateAlign="Scroll"
+         warehouse_origin='-' warehouse_originSpan='2' warehouse_originAlign="Scroll"
+         warehouse_destination='-'  warehouse_destinationSpan='2' warehouse_destinationAlign="Scroll"
+         warehouseman='-' warehousemanSpan="3" warehousemanAlign="Scroll"
+         warehouseman_destination='-' warehouseman_destinationSpan="3" warehouseman_destinationAlign="Scroll"
+         note='-' noteSpan="4" noteAlign="Scroll"
+      />
+   </Def>
+
+   <LeftCols>
+      <C Name='document_type'  Width='150' Type='Text' CanEdit='1' VarHeight='1'   CaseSensitive='0' />
+      <C Name='document_abbrevation' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='document_no' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+   </LeftCols>
+
+   <Cols>
+      <C Name='posting_date' Width='150'  Type='Date' Format="yyyy-MM-dd" CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='document_date' Width='150'  Type='Date' Format="yyyy-MM-dd" CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='warehouse_origin' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='warehouse_origin_code' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='warehouse_destination' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='warehouse_destination_code' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='item_uuid' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='item_name' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='item_code'  Width='150' Type='Text' CanEdit='1' VarHeight='1'   CaseSensitive='0' />
+      <C Name='item_type'  Width='150' Type='Text' CanEdit='1' VarHeight='1'   CaseSensitive='0' />
+      <C Name='item_barcode' Width='150' Type='Text' CaseSensitive='0' CanEdit='2'   VarHeight='1'/>
+      <C Name='item_brand'  Width='150' Type='Text' CanEdit='2' VarHeight='1'   CaseSensitive='0' />
+      <C Name='item_category' Width='150' Type='Text' CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='item_subcategory' Width='150' Type='Text' CanEdit='2'  CaseSensitive='0' VarHeight='1' />
+      <C Name='item_unit' Width='150' Type='Text' VarHeight='2' CanSort='1' CanEdit='1'/>
+      <C Name='item_quantity' Width='150' Type='Float' Format='0.00' CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='warehouseman' Width='150' Type='Text' CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='warehouseman_department' Width='150' Type='Text' CaseSensitive='0' CanEdit='2'   VarHeight='1'/>
+      <C Name='warehouseman_approve' Width='150' Type='Bool' CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='warehouseman_destination' Width='150' Type='Text' CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='warehouseman_destination_department' Width='150' Type='Text' CaseSensitive='0' CanEdit='2'   VarHeight='1'/>
+      <C Name='warehouseman_destination_approve' Width='150' Type='Bool' CaseSensitive='0' CanEdit='1'   VarHeight='1'/>
+      <C Name='note' Width='150' Type='Text' VarHeight='1' CanSort='1' CanEdit='1'/>
+      <C Name='warehouse_origin_uuid' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='warehouse_destination_uuid' Width='150' Type='Text' CanEdit='1'  CaseSensitive='0' VarHeight='1' />
+      <C Name='uuid' Width='150' Type='Text' CanEdit='2'  CaseSensitive='0' VarHeight='1' />
+
+   </Cols>
+
+    <Solid>     
+
+      <Group Space='1' Calculated='1' Panel='1' Custom='1' id='Group' CanFocus='0' NoUpload="0" CanGroup='1'/>
+      
+      <Search 
+         Space='1' Panel='1' id='Search' CanFocus='0' NoUpload="0" Calculated='1'
+         Cells='Case,Type,Expression,Sep1,Filter,Select,Mark,Find,Clear,Sep2'
+         ExpressionAction='Last' ExpressionNoColor='0' ExpressionCanFocus='1' ExpressionLeft='5' ExpressionMinWidth='50'
+         ExpressionEmptyValue ='&lt;s>Kërkoni...&lt;/s>' 
+         CaseLeft="5" CaseLabelRight="Karaktere të ndjeshme"
+         TypeLeft="5" TypeLabelRight="Qeliza" 
+         Sep1Width="5" Sep1Type="Html" 
+         Sep2Width="5" Sep2Type="Html"
+         CanPrint='5' DefsPrintHPage='1' CasePrintHPage='1' TypePrintHPage='1' 
+         ExpressionPrintHPage='2' Sep1PrintHPage='2' FilterPrintHPage='2' SelectPrintHPage='2' MarkPrintHPage='2' FindPrintHPage='2' ClearCanPrint='0' HelpCanPrint='0' Sep2PrintHPage='2'
+      />
+   </Solid>
+
+   <Head>
+      <Header 
+         id="Header3" CDef='Node' Spanned='1' Calculated='1' CanDelete='1' CanSelect='1'
+         item_uuid='Transfer Items'  item_uuidSpan='10' item_uuidAlign="Scroll" A0="A0 centered &amp; scrolled"
+         
+      />
+      <Header 
+         id="Header2"  CDef = 'Node' Calculated='1'  Spanned='1'
+         Nr.=''
+         document_type='Document' document_typeSpan='3' document_typeAlign="Scroll" A0="A0 centered &amp; scrolled"
+         posting_date="Dates" posting_dateSpan="2" posting_dateAlign="Scroll"
+         warehouse_origin='Warehouse Origin' warehouse_originSpan='2' warehouse_originAlign="Scroll"
+         warehouse_destination='Warehouse Destination'  warehouse_destinationSpan='2' warehouse_destinationAlign="Scroll"
+         warehouseman="Warehouseman" warehousemanSpan="3" warehousemanAlign="Scroll"
+         warehouseman_destination='Warehouseman Destination' warehouseman_destinationSpan="3" warehouseman_destinationAlign="Scroll"
+         note="Configuration" noteSpan="4" noteAlign="Scroll"
+      
+      />
+   </Head>
+
+   <Head>
+      <Filter 
+         id='Filter' Calculated='1' CaseSensitive='0' 
+
+         posting_dateRange="1" posting_dateButton="Date" posting_dateShowMenu="0" posting_dateTip="Posting date. You can can select a date or a date range in the calendar to filter your rows"
+         document_dateRange="1" document_dateButton="Date" document_dateShowMenu="0" document_dateTip="Document date. You can can select a date or a date range in the calendar to filter your rows"
+         warehouse_originSuggest='|*RowsCanFilter'
+         warehouse_origin_codeSuggest='|*RowsCanFilter'
+         warehouse_destinationSuggest='|*RowsCanFilter'
+         warehouse_destination_codeSuggest='|*RowsCanFilter'
+         item_nameSuggest='|*RowsCanFilter' 
+         item_codeSuggest='|*RowsCanFilter'
+         item_typeSuggest='|*RowsCanFilter'
+         item_barcodeSuggest='|*RowsCanFilter'
+         item_brandSuggest='|*RowsCanFilter'
+         item_categorySuggest='|*RowsCanFilter'
+         item_subcategorySuggest='|*RowsCanFilter'
+         item_unitSuggest='|*RowsCanFilter'
+         item_quantitySuggest='|*RowsCanFilter'
+         warehousemanSuggest='|*RowsCanFilter'
+         warehouseman_departmentSuggest='|*RowsCanFilter'
+         warehouseman_approveSuggest='|*RowsCanFilter'
+         warehouseman_destinationSuggest='|*RowsCanFilter'
+         warehouseman_destination_departmentSuggest='|*RowsCanFilter'
+         warehouseman_destination_approveSuggest='|*RowsCanFilter'
+         warehouse_origin_uuidSuggest='|*RowsCanFilter'
+         warehouse_destination_uuidSuggest='|*RowsCanFilter'
+         uuidSuggest='|*RowsCanFilter'
+      />
+   </Head>
+
+   <Header 
+      id="Header1" CDef = 'Node' Spanned='1'  Calculated='0' CanDelete='0' CanSelect='0'  SortIcons='0' 
+      Nr.=''
+      document_type="" document_typeSpan="3" document_typeAlign="Scroll" A0="A0 centered &amp; scrolled"
+      posting_date="Transfer" posting_dateSpan="35" posting_dateAlign="Scroll"
+   />
+      
+   <Foot>
+      <I 
+         id='Fix1' 
+         Def='Foot' 
+         CanDelete='0' CanEdit='2' Calculated='1'  Spanned='1' CanSelect='0'
+         warehouse_originFormula='count(1)+"  recepturë(a)"'
+          document_dateRange='1'
+        posting_dateRange='1'
+          warehouse_destination_uuidType="Float"
+          document_typeType="Float"
+          document_abbrevationType="Float" warehouseman_destination_approveType="Int" 
+      />
+
+   </Foot>
+</Grid>

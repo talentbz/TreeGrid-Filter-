@@ -1,0 +1,50 @@
+TreeGrid required files
+
+
+The /Grid directory contains all required files to use TreeGrid. 
+No other directories are required to use TreeGrid.
+
+
+GridE.js
+Main TreeGrid script, it must be included to the html page to use TreeGrid. 
+The only file that must be referred to use TreeGrid.
+
+GridEStandalone.js
+TreeGrid standalone script that includes all required files from the /Grid directory. 
+Can be included into page instead of GridE.js file to avoid loading other required files like styles or Defaults/Text.
+
+GridED.js
+Short script that can be included into page instead of GridE.js script to load the script GridE.js on demand only.
+
+Defaults.xml
+Default settings for TreeGrid. 
+Used when TreeGrid is in XML mode (<bdo/treegrid Json='0'>)
+
+Text.xml
+Language settings for TreeGrid, US English language. 
+Other languages are in /Languages subdirectory. 
+Used when TreeGrid is in XML mode (<bdo/treegrid Json='0'>)
+
+Defaults.js
+Default settings for TreeGrid. 
+Used when TreeGrid is in JSON mode (<bdo/treegrid Json='1' or '2'>)
+
+Text.js
+Language settings for TreeGrid, US English language. 
+Other languages are in /Languages subdirectory. 
+Used when TreeGrid is in JSON mode (<bdo/treegrid Json='1' or '2'>)
+
+Drag.cur, NoDrag.cur
+Mouse cursors used for dragging, only in IE and old Edge (for other browsers they are defined them in Dialog.css)
+
+Ding.wav
+Beep played on error in EditMask when grid has set <Cfg Silent='0'/>
+
+Help.html
+Default user help for TreeGrid. 
+It is displayed after user clicks on Help button at control panel.
+
+
+For more information about Json attribute and its default value see http://www.treegrid.com/Doc/DataCommunication.htm#Json
+
+For more information about the files see http://www.treegrid.com/Doc/Files.htm

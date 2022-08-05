@@ -1,0 +1,8 @@
+canvg.js is third party library for converting SVG to PNG images. 
+
+It is independent on TreeGrid. It is distributed under MIT license.
+
+It is loaded by TreeGrid only in Internet Explorer when exporting SVG images to XLSX. 
+
+canvg.js requires rgbcolor.js that is included in the canvg.js and is distributed also under MIT license.
+
